@@ -2,13 +2,17 @@
 # wm independent hotkeys
 #
 
+#
+# Application Launcher Shortcuts
+#
+
 # terminal emulator
 super + Return
 	xfce4-terminal
 
 # program launcher
 super + @space
-	dmenu_run
+	dmenu_run -fn 'JetBrainsMono Nerd Font:pixelsize=16' -nb '#000000' -nf '#f8f8f2' -sb '#3385ff' -sf '#f8f8f2'
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -21,6 +25,10 @@ super + w
 # File Manager launcher
 super + n
 	pcmanfm
+
+# Screenshot
+super + Print
+	gnome-screenshot -i
 
 #
 # bspwm hotkeys

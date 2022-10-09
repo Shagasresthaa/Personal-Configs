@@ -8,7 +8,9 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
+
     xrdb -merge $sysresources
+
 fi
 
 if [ -f $sysmodmap ]; then
@@ -16,7 +18,9 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
+
     xrdb -merge "$userresources"
+
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -35,6 +39,6 @@ fi
 xsetroot -cursor_name left_ptr
 picom -f &
 nitrogen --restore &
-#polybar &
+polybar &
 
 exec bspwm
